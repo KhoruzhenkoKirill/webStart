@@ -1,38 +1,162 @@
-.App {
+.Body {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: auto;
+  background: #498CEC;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+.Top{
+  display: flex;
+  flex-direction: row;
+
+  padding-top: 50px;
+  padding-right: 200px;
+  padding-left: 200px;
+}
+
+.City {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+
+  color: #FFFFFF;
+}
+
+.Switch {
+  margin-left: auto;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+
+  color: #FFFFFF;
+}
+
+.ChangeCity {
+  display: inline;
+
+  padding-left: 200px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+
+  color: #FFFFFF;
+
+  mix-blend-mode: normal;
+  opacity: 0.6;
+}
+
+.Geolocation {
+  display: inline;
+
+  padding: 20px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+
+  color: #FFFFFF;
+
+  mix-blend-mode: normal;
+  opacity: 0.6;
+}
+
+.Center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -125px 0 0 -225px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Weather {
+  display: block;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 180px;
+
+  color: #FFFFFF;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.img{
+  display: inline-block;
+  background-image: url("123.svg");
+  width: 139px;
+  height: 139px;
+
+  margin: auto;
+}
+
+.img2{
+  display: inline-block;
+  background-image: url("Path 2.svg");
+  width: 19px;
+  height: 20px;
   }
+
+.Weather-Description{
+  display: block;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+
+  color: #FFFFFF;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Bottom{
+  display: block;
+  position: fixed;
+  bottom: 50px;
+
+  padding-right: 200px;
+  padding-left: 200px;
+
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.Params{
+  display: inline-block;
+
+  width: 360px;
+  height: 31px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+
+  color: #FFFFFF;
+
+  mix-blend-mode: normal;
+  opacity: 0.6;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Values{
+  display: inline-block;
+
+  width: 360px;
+  height: 31px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+
+  color: #FFFFFF;
+}
+
+.Spinner{
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
