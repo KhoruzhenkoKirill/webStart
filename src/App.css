@@ -91,7 +91,6 @@ input[type=radio] {
 
 .img{
   display: inline-block;
-  background-image: url("123.svg");
   width: 139px;
   height: 139px;
 
@@ -159,4 +158,11 @@ input[type=radio] {
   position: absolute;
   top: 50%;
   left: 50%;
+}
+
+.but{
+  border: none;
+  background: none;
+
+  color: #FFFFFF;
 }

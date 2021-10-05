@@ -20,9 +20,11 @@ export function useWeather() {
                         temp: result.main.temp,
                         wind_speed: result.wind.speed,
                         name: result.name,
-                        description: result.weather[0].description,
+                        description: result.weather[0].description[0].toUpperCase() + result.weather[0].description.substr(1),
                         pressure: result.main.pressure,
                         humidity: result.main.humidity,
+                        icon: result.weather[0].icon,
+                        cloudiness: result.clouds.all
                     })
                 },
             )

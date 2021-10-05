@@ -4,14 +4,25 @@ import Button from './Button'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useWeather} from "./useWeather"
 import {Spinner} from "react-bootstrap";
+import Button2 from "./Button2";
+import usePosition from "./usePosition";
 
 function App() {
 
     const weather = useWeather();
-    
+    const {value} = Button2();
+    let temp;
+
+    console.log(value)
+
+    if (value === 1)
+        temp = parseInt(weather.temp);
+    if (value === 2)
+        temp = parseInt(weather.temp) * 9 / 5 + 32;
+
     if(!weather)
         return <Spinner animation="border"/>;
-    
+
     return (
             <main className="Body">
                 <section className="Top">
@@ -19,18 +30,21 @@ function App() {
                         {weather.name}
                     </article>
                     <article className="Switch">
-                        <Button/>
+                        <Button2/>
                     </article>
                 </section>
                 <article className="ChangeCity">
-                    Сменить город
+                    <button className={"but"}>Сменить город</button>
                 </article>
                 <article className="Geolocation">
-                    <div className="img2"/>
+                    <button className={"but"}>
+                        <div className="img2"/>
+                        Моё местоположение
+                    </button>
                 </article>
                 <section className="Center">
                     <article className="Weather">
-                        <div className="img"/>
+                        <img className={"img"} src={`http://openweathermap.org/img/wn/${weather.icon}@2x.png`}/>
                         {parseInt(weather.temp)}°
                     </article>
                     <article className="Weather-Description">
@@ -49,7 +63,7 @@ function App() {
                             Влажность
                         </article>
                         <article className="Params">
-                            Вероятность дождя
+                            Облачность
                         </article>
                     </section>
                     <section>
@@ -57,13 +71,13 @@ function App() {
                             {weather.wind_speed} м/с
                         </article>
                         <article className="Values">
-                            {weather.pressure} мм рт. ст.
+                            {Math.round(weather.pressure/1.333)} мм рт. ст.
                         </article>
                         <article className="Values">
                             {weather.humidity}%
                         </article>
                         <article className="Values">
-                            10%
+                            {weather.cloudiness}%
                         </article>
                     </section>
                 </section>

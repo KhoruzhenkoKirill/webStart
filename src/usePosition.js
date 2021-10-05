@@ -19,6 +19,6 @@ export function usePosition() { //location
     );
 
     return coordinates;
-};
+}
 
 export default usePosition
